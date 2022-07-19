@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "jest",
+    "test": "vitest",
     "cov": "jest --coverage",
     "lint": "eslint . --ext .js --ext .vue --quiet --fix",
     "type-check": "tsc --pretty --noEmit"
@@ -41,6 +41,7 @@
     "husky": "^8.0.1",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
+    "jsdom": "^20.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "ts-jest": "^28.0.5",
