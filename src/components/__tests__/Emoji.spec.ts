@@ -2,12 +2,16 @@ import { mount } from '@vue/test-utils'
 import Emoji from '../Emoji.vue'
 
 describe('Emoji Component', () => {
-	test('should render 5 emojis', () => {
+	test('should show when enabled 5 emojis', async () => {
+		const count = 5
 		const wrapper = mount(Emoji, {
 			propsData: {
-				count: 5
+				count
 			}
 		})
-		expect(wrapper.html()).toMatchSnapshot()
+		const button = wrapper.find('button')
+		await button.trigger('click')
+		const list = wrapper.findAll('span')
+		expect(list.length).toBe(count)
 	})
 })
